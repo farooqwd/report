@@ -43,10 +43,13 @@ const Form = () => {
             data: data,
           },
         });
-        addToast("report submited", {
-          appearance: "success",
-          autoDismiss: true,
-        });
+        addToast(
+          "Your issue is reported, your issue ID is " + response?.data?.message,
+          {
+            appearance: "success",
+            autoDismiss: false,
+          }
+        );
       }
     } catch (error) {
       addToast(error?.response?.data?.error || "request failed", {

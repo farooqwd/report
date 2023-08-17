@@ -14,7 +14,7 @@ export default function Home() {
   // console.log(data);
   useEffect(() => {
     const fetch = async () => {
-      addToast("fetching data", {
+      addToast("Fetching Data...", {
         appearance: "info",
         autoDismiss: true,
       });
@@ -57,11 +57,19 @@ export default function Home() {
 
   const rows = data;
   const columns = [
-    { field: "id", headerName: "ID", flex: 1 },
-    { field: "title", headerName: "Title", flex: 1 },
+    { field: "id", headerName: "", flex: 0.5 },
+    { field: "_id", renderHeader: () => <strong>Id</strong>, flex: 0.5 },
+    {
+      field: "title",
+      // headerName: "Title",
+      flex: 1,
+      className: "bold",
+      renderHeader: () => <strong>Title</strong>,
+    },
     {
       field: "image",
-      headerName: "Image",
+      // headerName: "Image",
+      renderHeader: () => <strong>Image</strong>,
       flex: 1,
       hide: "sm",
       renderCell: (params) => {
@@ -80,8 +88,20 @@ export default function Home() {
         );
       },
     },
-    { field: "description", headerName: "Description", flex: 3, hide: "sm" },
-    { field: "location", headerName: "Address", flex: 1, hide: "sm" },
+    {
+      field: "description",
+      // headerName: "Description",
+      renderHeader: () => <strong>Description</strong>,
+      flex: 3,
+      hide: "sm",
+    },
+    {
+      field: "location",
+      // headerName: "Address",
+      renderHeader: () => <strong>Address</strong>,
+      flex: 1,
+      hide: "sm",
+    },
     {
       field: "view",
       headerName: "",
@@ -126,7 +146,7 @@ export default function Home() {
             },
           }}
           pageSizeOptions={[10]}
-          checkboxSelection
+          checkboxSelection={false}
           disableRowSelectionOnClick
           className="grid"
         />

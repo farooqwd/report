@@ -11,6 +11,10 @@
     align-items: center;
     justify-content: center;
     .content {
+      transform: translateX(10vh);
+      @media (max-width: 767px) {
+        transform: none;
+      }
       .back {
         align-self: flex-start;
         padding: 5px 11px;
@@ -34,7 +38,8 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    padding: 100px 8%;
+    padding: 100px 8% 70px 0;
+    text-align: justify;
     justify-content: space-around;
     .title {
       font-weight: 700;
@@ -51,6 +56,7 @@
     @media (max-width: 767px) {
       width: 100%;
       min-height: 70vh;
+      padding: 0;
       gap: 30px;
     }
   }
