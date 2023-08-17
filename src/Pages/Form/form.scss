@@ -1,0 +1,47 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  .head {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    .header {
+      font-weight: 700;
+      font-size: 24px;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 50%;
+    @media (max-width: 767px) {
+      width: 80%;
+    }
+    .imgwraper {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-items: center;
+      gap: 20px;
+      .image {
+        height: 150px;
+        width: 150px;
+        border-radius: 20px;
+      }
+      .label {
+        cursor: pointer;
+        color: green;
+      }
+    }
+    .btn {
+      width: 50%;
+      align-self: center;
+    }
+  }
+}

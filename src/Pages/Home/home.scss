@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  .content {
+    width: 80%;
+    .head {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .h {
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 32px;
+      }
+    }
+    .grid {
+      width: 100%;
+    }
+  }
+}
