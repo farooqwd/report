@@ -81,7 +81,7 @@ const Form = () => {
             accept="jpeg png jpg"
           />
           <label htmlFor="img" className="label flex">
-            select pic<span style={{ fontSize: "8px" }}>(upto 50kb now)</span>
+            select pic<span style={{ fontSize: "8px" }}>(upto 50kb)</span>
           </label>
         </div>
         <TextField
